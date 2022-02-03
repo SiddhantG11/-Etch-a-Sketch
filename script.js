@@ -5,20 +5,30 @@ function makeRows(rows, cols) {
   container.style.setProperty('--grid-cols', cols);
   for (c = 0; c < (rows * cols); c++) {
     let cell = document.createElement("div");
-    container.appendChild(cell).id = "grid-item";
+    container.appendChild(cell).className = "grid-item";
   };
 };
 makeRows(16, 16);
 
 
-let addClass = document.querySelectorAll("#grid-item");
+const items = document.querySelectorAll(".grid-item");
 
-addClass.forEach(e => {
+items.forEach(e => {
   e.addEventListener('mouseover', event => {
     event.target.style.backgroundColor = "black";
-    // console.log(event);
   })
 })
+
+function clearGrid() {
+  items.forEach(e => e.style.setProperty('background-color', 'transparent'));
+}
+
+// const clearButton = document.querySelector('#eraserButton');
+// clearButton.addEventListener("click", clearGrid); 
+// function clearGrid() {
+//   console.log('hello');
+// }
+
 
 
 
