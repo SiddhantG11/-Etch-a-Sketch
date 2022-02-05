@@ -9,15 +9,21 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="header">Etch A Sketch</div>
-    <div class="eraserButton"> 
-        <button id="eraserButton" onclick="clearGrid()">Clear Grid</button>
-    </div>
-    
+    <div class="section">
+        <div class="header">Etch A Sketch</div>
+        <div class="container" id="container"> </div>
+        <div class="buttonContainer">
+            <div class="eraserButton"> 
+                <button id="eraserButton" onclick="clearGrid()">Clear Grid</button>
+            </div>
+            <div class="sizeButton"> 
+                <button id="sizeButton" onclick="changeSize()">Change Size</button>
+            </div>
 
-    <div class="container" id="container"> </div>
-    <div class="footer">Made for the Odin Project</div>
-    <!-- checl this out https://www.freecodecamp.org/news/html-button-onclick-javascript-click-event-tutorial/ -->
+        </div>       
+        <div class="footer">Made for the Odin Project</div>
+
+    </div>
 
 </body>
 </html>
